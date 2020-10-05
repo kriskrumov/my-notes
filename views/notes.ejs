@@ -17,8 +17,15 @@
             <h1 id="myNoteLabel">My Notes</h1>
         </header>
             <nav>
-                <!-- <li><a href="/notes/new">Add Note</a></li> -->
                 <a href="/notes/new"><img id="smLogo" src="/public/assets/addBtn.png" alt="MyLogo2" width="120"></a>
+                <p>
+                    <form action="/notes" method="GET" class="searchForm">
+                        <div class="searchDiv">
+                            <input id="searchInp" type="text" name="search" placeholder="Search">
+                            <input type="submit" value="Search">
+                        </div>
+                    </form>
+                </p>
                 <a id="logoutBtn" href="/logout">Logout</a>
             </nav>
             <main>

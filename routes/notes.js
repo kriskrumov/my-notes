@@ -1,3 +1,4 @@
+const { text } = require("body-parser");
 var express     = require("express");
 var router      = express.Router({mergeParams: true});
 var Note        = require("../models/note");
@@ -5,7 +6,18 @@ var User        = require("../models/user");
 
 // INDEX - SHOW ALL NOTES
 router.get("/",isLoggedIn, (req, res) => {
+    // SEARCH FOR A SPECIFIC NOTE WITH THE TITLE
     currentUser = req.user;
+    if(req.query.search){
+        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+        Note.find({'userID': req.user._id, title: regex}, function(err, allNotes){
+            if(err){
+                console.log(err);
+            } else {
+                res.render("notes", {currentUser: req.user , notes:allNotes});
+            }
+        });
+    } else {
     // GET ALL NOTES FROM MONGODB FOR THE CURRENT USER
     Note.find({'userID': req.user._id}, function(err, allNotes){
         if(err){
@@ -14,6 +26,7 @@ router.get("/",isLoggedIn, (req, res) => {
             res.render("notes", {currentUser: req.user , notes:allNotes});
         }
     });
+}
 });
 
 // CREATE - CREATES A NEW NOTE
@@ -90,6 +103,10 @@ function isLoggedIn(req, res, next){
         return next();
     }
     res.redirect("/");
+}
+
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 }
 
 module.exports = router;
