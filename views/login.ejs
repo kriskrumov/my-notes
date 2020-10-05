@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes</title>
+    <link href="/public/assets/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="logPageBody">
+    <img id="logo" src="/public/assets/logo.png" alt="MyLogo"  height="250">
+    <div class="loginForm">
+        <form action="/" method="POST">
+            <input type="text" name="username" placeholder="Username">
+            <input id="pswField" type="password" name="password" placeholder="Password">
+            <div class="pswCheckBox"><input id="shwPsw" type="checkbox" onclick="myFunction()">
+            <label id="lbShwPsw" for="shwPsw">Show password</label></div>
+            <button id="logBtn">Login</button>
+            <a href="/register">Sign Up</a>
+        </form>
+    </div>
+</body>
+
+<script>
+        function myFunction() {
+            var x = document.getElementById("pswField");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+    }
+</script>
+</html>
+
+

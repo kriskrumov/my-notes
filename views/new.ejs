@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes</title>
+    <link rel="stylesheet" href="/public/assets/style.css"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="newNoteHeader">New Note</h1>
+    <div class="createNotePage">
+        <form action="/notes" method="POST">
+            <input id="newTitleInput" type="text" name="title" placeholder="Title" required>
+            <textarea name="content" id="contTextArea" cols="30" rows="10" placeholder="Content" required></textarea>
+            <button type="submit">Add Note</button>
+        </form>
+    </div>
+    <a id="newBackBtn" href="/notes">Back</a>
+</body>
+</html>

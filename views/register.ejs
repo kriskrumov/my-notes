@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes</title>
+    <link rel="stylesheet" href="/public/assets/style.css">
+</head>
+<body class="regPageBody">
+    <h1 id="regLabel">Register</h1>
+    <div class="regForm">
+        <form action="/register" method="POST">
+            <input type="text" name="username" placeholder="Username">
+            <input id="password" type="password" name="password" placeholder="Password">
+            <!-- <span id="error"></span> -->
+            <button id="regBtn">Register</button>
+            <a href="/">Sign In</a>
+        </form>
+    </div>
+</body>
+<!-- <script> 
+    function errorMessage() { 
+        var error = document.getElementById("error") 
+        if (isNaN(document.getElementById("password").value))  
+        { 
+              
+            // Changing content and color of content 
+            error.textContent = "Password should contain more than 6 characters." 
+            error.style.color = "red" 
+        } else { 
+            error.textContent = "" 
+        } 
+    } 
+</script> -->
+</html>
