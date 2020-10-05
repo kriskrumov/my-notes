@@ -233,11 +233,22 @@ input[type="text"],[type="password"]{
      padding: 10px;
      border: 2px solid black;
      width: 300px;
-     background-color: rgb(241, 241, 128);
+     background-color: rgb(248, 248, 128);
 } 
 
+/* background-color: rgb(241, 241, 128) */
+
+
+/* NOTE STYLING */
 .noteContainer:hover{
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
+    background: rgb(241, 241, 31);
+    box-shadow:
+    1px 1px #53a7ea,
+    2px 2px #53a7ea,
+    3px 3px #53a7ea;
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
 }
 
 .notesBtns{

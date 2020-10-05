@@ -42,7 +42,7 @@ router.get("/logout", function(req, res){
     res.redirect("/"); 
 });
 
-// MIDLEWARE
+// MIDLEWARE FUNCTION FOR AUTHENTICATION
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();

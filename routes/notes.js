@@ -29,11 +29,10 @@ router.get("/",isLoggedIn, (req, res) => {
 }
 });
 
-// CREATE - CREATES A NEW NOTE
+// CREATE - CREATES A NEW NOTE AND SAVE TO MONGODB
 router.post("/", function(req, res){
     req.body.title
     req.body.content
-    // CREATE A NOTE AND SAVE TO MONGODB
     Note.create(({title: req.body.title, content: req.body.content, userID: currentUser, username: req.user.username }), function(err, note){
         if(err){
             console.log(err);
@@ -50,7 +49,7 @@ router.get("/new",isLoggedIn, (req, res) => {
     res.render("new.ejs");
 });
 
-// Shows more info about a Note
+// SHOWS MORE INFO ABOUT A NODE
 router.get("/:id", function(req, res){
     Note.findById(req.params.id).exec(function(err, foundNote){
         if(err){
@@ -97,7 +96,7 @@ router.delete("/:id", function(req, res){
     });
 });
 
-// MIDLEWARE
+// MIDLEWARE FUNCTION FOR AUTHENTICATION
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
@@ -105,6 +104,7 @@ function isLoggedIn(req, res, next){
     res.redirect("/");
 }
 
+// REGULAR EXPRESSION FUNCTION FOR SPECIFIENG USER INPUT
 function escapeRegex(text) {
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 }
