@@ -11,8 +11,8 @@
     <div class="regForm">
         <form action="/register" method="POST">
             <input type="text" name="username" placeholder="Username">
-            <input id="password" type="password" name="password" placeholder="Password" onkeyup='check();'>
-            <input id="passwordConfirm" type="password" name="passwordConfirm" placeholder="Confirm Password" onkeyup='check();'>
+            <input id="password" type="password" name="password" placeholder="Password">
+            <input id="passwordConfirm" type="password" name="passwordConfirm" placeholder="Confirm Password">
             <br>
             <span id="message"></span>
             <button id="regBtn">Register</button>
@@ -36,15 +36,43 @@
 </script> -->
 
 <script>
-    var check = function() {
-        if (document.getElementById('password').value ==
-            document.getElementById('passwordConfirm').value) {
-            document.getElementById('message').style.color = 'green';
-            document.getElementById('message').innerHTML = 'matching';
-        } else {
-            document.getElementById('message').style.color = 'red';
-            document.getElementById('message').innerHTML = 'X';
-        }
-    }
+
+    // document.querySelector('#regBtn').onClick = function(){
+    //     var password = document.querySelector('#password').value,
+    //     confirmPassword = document.querySelector('#passwordConfirm').value;
+
+    //     if(password == "") {
+    //         alert("Field cannot be empty.");
+    //     }
+    //     else if(password != confirmPassword){
+    //         alert("Password didn't match try again.");
+    //     }
+    // }
+
+
+    // var check = function() {
+    //     if (document.getElementById('password').value ==
+    //         document.getElementById('passwordConfirm').value) {
+    //         document.getElementById('password').style.backgroundColor = 'lightgreen';
+    //         document.getElementById('passwordConfirm').style.backgroundColor = 'lightgreen';
+    //         document.getElementById('message').style.color = 'green';
+    //         document.getElementById('message').innerHTML = '🗸';
+    //     } else {
+    //         document.getElementById('password').style.backgroundColor = 'transparent';
+    //         document.getElementById('passwordConfirm').style.backgroundColor = 'transparent';
+    //         document.getElementById('message').style.color = 'red';
+    //         document.getElementById('message').innerHTML = 'X';
+    //     }
+    // onkeyup='check();'
+    // }
+
+//     function check_pass() {
+//     if (document.getElementById('password').value ==
+//             document.getElementById('confirm_password').value) {
+//         document.getElementById('regBtn').disabled = false;
+//     } else {
+//         document.getElementById('regBtn').disabled = true;
+//     }
+// }
 </script>
 </html>
