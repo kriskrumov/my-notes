@@ -171,9 +171,15 @@ textarea{
     border: #08141d 4px solid; 
 }
 
+
+
+span {
+    
+}
+
 #logBtn, #regBtn{
     display: block;
-    margin: auto;
+    margin: 10px auto 5px auto;
     /* margin-top: 10px; */
 
 }
