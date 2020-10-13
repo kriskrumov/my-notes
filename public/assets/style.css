@@ -27,6 +27,21 @@ nav li a {
     color: black;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo:hover{
+    transform: scale(1.02);
+}
+
 #searchInp{
     width: 5em;
 }
@@ -36,12 +51,6 @@ nav li a {
     bottom: 1%;
     text-decoration: none;
     color: black;
-}
-
-#logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #smLogo:hover{
@@ -168,9 +177,13 @@ span {
 #logBtn, #regBtn{
     font-size: 16px;
     background-color: #dad8d8;
-    border-radius: 12px;
+    border-radius: 8px;
     display: block;
     margin: 10px auto 5px auto;
+}
+
+#logBtn:hover, #regBtn:hover{
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
 }
 
 .pswCheckBox{
@@ -267,7 +280,7 @@ input[type="text"],[type="password"]{
     background: rgb(92, 212, 212);
     grid-area: head;
 }
-  
+
 #page > nav {
     background-color: #dad8d8;
     font-size: 20px;
@@ -284,4 +297,4 @@ input[type="text"],[type="password"]{
     grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;; 
     grid-gap: 10px;
     overflow-y: scroll;
-    }
+}
