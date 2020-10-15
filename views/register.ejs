@@ -10,8 +10,8 @@
     <h1 id="regLabel">Register</h1>
     <div class="regForm">
         <form action="/register" method="POST">
-            <input type="text" name="username" placeholder="Username">
-            <input id="password" type="password" name="password" placeholder="Password">
+            <input type="text" name="username" placeholder="Username" minlength="5" maxlength="20" required>
+            <input id="password" type="password" name="password" placeholder="Password" minlength="6" maxlength="30" required>
             <input id="passwordConfirm" type="password" name="passwordConfirm" placeholder="Confirm Password">
             <br>
             <span id="message"></span>

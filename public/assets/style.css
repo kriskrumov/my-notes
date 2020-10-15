@@ -38,10 +38,6 @@ a{
     margin-right: auto;
 }
 
-#logo:hover{
-    transform: scale(1.02);
-}
-
 #searchInp{
     width: 5em;
 }
@@ -164,10 +160,13 @@ textarea{
     text-align: center;
     background:white;
     width:300px;
-    border-radius:6px;
+    /* border-radius:6px; */
     margin:1% auto 0 auto;
     padding:20px 20px 20px 20px;
-    border: #08141d 2px solid; 
+    /* border: #08141d 2px solid; */
+    border: 10px outset rgb(248, 248, 128);
+    border-radius: 33px;
+
 }
 
 span {
