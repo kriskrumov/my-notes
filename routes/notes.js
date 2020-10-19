@@ -1,4 +1,4 @@
-const { text } = require("body-parser");
+const { text }  = require("body-parser");
 var express     = require("express");
 var router      = express.Router({mergeParams: true});
 var Note        = require("../models/note");
@@ -6,7 +6,7 @@ var User        = require("../models/user");
 
 // INDEX - SHOW ALL NOTES
 router.get("/",isLoggedIn, (req, res) => {
-    // SEARCH FOR A SPECIFIC NOTE WITH THE TITLE
+    // SEARCH FOR A SPECIFIC NOTE WITH THE TITLE EITHER WITH FULL STRING OR WITH MATHING CHARACTERS)
     currentUser = req.user;
     if(req.query.search){
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
@@ -29,7 +29,7 @@ router.get("/",isLoggedIn, (req, res) => {
 }
 });
 
-// CREATE - CREATES A NEW NOTE AND SAVE TO MONGODB
+// CREATES A NEW NOTE AND SAVE TO MONGODB
 router.post("/", function(req, res){
     req.body.title
     req.body.content
@@ -104,7 +104,7 @@ function isLoggedIn(req, res, next){
     res.redirect("/");
 }
 
-// REGULAR EXPRESSION FUNCTION FOR SPECIFIENG USER INPUT
+// REGULAR EXPRESSION FUNCTION FOR SPECIFIENG USER INPUT(FINDS NOTES BY MATHING CHARACTER)
 function escapeRegex(text) {
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 }

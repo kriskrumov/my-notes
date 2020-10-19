@@ -1,5 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
+    /* background:#fefae0; */
     background: #dad8d8;
 }
 
@@ -269,6 +270,7 @@ input[type="text"],[type="password"]{
 }
   
 #page > header {
+    /* background: #0e8bce; */
     background: rgb(92, 212, 212);
     grid-area: head;
 }

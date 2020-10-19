@@ -1,8 +1,8 @@
-var express     = require("express");
-const { check, validationResult } = require("express-validator");
-var router      = express.Router();
-var passport    = require("passport");
-var User        = require("../models/user");
+var express                         = require("express");
+const { check, validationResult }   = require("express-validator");
+var router                          = express.Router();
+var passport                        = require("passport");
+var User                            = require("../models/user");
 
 // ROOT ROUTE
 router.get("/", (req, res) => {
