@@ -130,3 +130,11 @@
 //     }
 //     res.redirect("/");
 // }
+
+
+
+// SORTING FAIL
+// }else if(req.query.sort){
+//     Note.find({'userID':req.user._id}, null, {sort: {title: "desc"}}, function (err, allNotes) {
+//         res.render("notes", {currentUser:req.user , notes:allNotes});
+//     });

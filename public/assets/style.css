@@ -132,7 +132,7 @@ input[type="text"],[type="password"]{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    text-transform:uppercase;
+    text-transform: capitalize;
 }
 
 #contentArea{
