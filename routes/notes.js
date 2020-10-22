@@ -17,6 +17,10 @@ router.get("/",isLoggedIn, (req, res) => {
                 res.render("notes", {currentUser: req.user , notes:allNotes});
             }
         });
+    }else if(req.query.sort){
+        Note.find({'userID':req.user._id}, null, {sort: {title: 1}}, function (err, allNotes) {
+            res.render("notes", {currentUser:req.user , notes:allNotes});
+        });
     } else {
     // GET ALL NOTES FROM MONGODB FOR THE CURRENT USER
     Note.find({'userID': req.user._id}, function(err, allNotes){
