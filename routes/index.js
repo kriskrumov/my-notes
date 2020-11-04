@@ -30,7 +30,7 @@ router.post("/register",(req,res) => {
 });
 
 // LOGIN LOGIC
-router.post("/",passport.authenticate("local",{
+router.post("/",passport.authenticate("local" ,{
     successRedirect: "/notes",
     failureRedirect: "/"
 }) ,function(req, res){

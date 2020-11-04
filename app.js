@@ -5,17 +5,12 @@ var  express                     = require('express'),
      bodyParser                  = require('body-parser'),
      methodOverride              = require("method-override"),
      User                        = require('./models/user'),    
-     Note                        = require('./models/note'),
-     LocalStrategy               = require('passport-local'),
-     PassportLocalMongoose       = require('passport-local-mongoose'),
-     { check, validationResult } = require('express-validator');
+     LocalStrategy               = require('passport-local')
 
 var noteRoutes                   = require("./routes/notes"),
     indexRoutes                  = require("./routes/index");
 
-// const note = require('./models/note');
-// const { populate, create, db } = require('./models/user');
-
+// MONGOOSE CONFIG AND CONNECTING TO THE MONGODB
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useCreateIndex', true);
