@@ -1,6 +1,6 @@
 const { text }  = require("body-parser");
 var express     = require("express");
-var router      = express.Router({mergeParams: true});
+var router      = express.Router();
 var Note        = require("../models/note");
 var User        = require("../models/user");
 
@@ -106,7 +106,7 @@ function isLoggedIn(req, res, next){
 
 // REGULAR EXPRESSION FUNCTION FOR SPECIFIENG USER INPUT(FINDS NOTES BY MATHING CHARACTER)
 function escapeRegex(text) {
-    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+    return text.replace();
 }
 
 module.exports = router;

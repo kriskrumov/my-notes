@@ -1,14 +1,13 @@
-var  express                     = require('express'),
-     mongoose                    = require('mongoose'),
-     flash                       = require('connect-flash'),
-     passport                    = require('passport'),
-     bodyParser                  = require('body-parser'),
-     methodOverride              = require("method-override"),
-     User                        = require('./models/user'),    
-     LocalStrategy               = require('passport-local')
-
-var noteRoutes                   = require("./routes/notes"),
-    indexRoutes                  = require("./routes/index");
+var  express                      = require('express'),
+     mongoose                     = require('mongoose'),
+     flash                        = require('connect-flash'),
+     passport                     = require('passport'),
+     bodyParser                   = require('body-parser'),
+     methodOverride               = require("method-override"),
+     User                         = require('./models/user'),    
+     LocalStrategy                = require('passport-local'),
+     noteRoutes                   = require("./routes/notes"),
+     indexRoutes                  = require("./routes/index");
 
 // MONGOOSE CONFIG AND CONNECTING TO THE MONGODB
 mongoose.set('useNewUrlParser', true);
